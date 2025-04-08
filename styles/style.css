@@ -1,0 +1,127 @@
+/* ==================== */
+/* # General Settings # */
+/* ==================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --color-green: hsl(75, 94%, 57%);
+
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+
+  --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+  /* Box model */
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  /* Typography */
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  text-align: center;
+
+  /* Visual */
+  background-color: var(--color-grey-900);
+}
+
+/* ============== */
+/* # Simple Reset */
+/* ============== */
+
+* {
+  /* Box model */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== */
+/* # Card Component # */
+/* ================== */
+
+.card {
+  /* Box model */
+  padding: 2em;
+  width: 20rem;
+
+  /* Visual */
+  color: var(--color-white);
+  background-color: var(--color-grey-800);
+  border-radius: 1.25em;
+}
+
+.card__avatar {
+  /* Box model */
+  display: inline-block;
+  max-width: 100%;
+  margin-block-end: 1.5em;
+
+  /* Visual */
+  border-radius: 50%;
+}
+
+.card__user-name {
+  /* Box model */
+  margin-block-end: 0.25em;
+
+  /* Typography */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card__user-location {
+  /* Typography */
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  /* Visual */
+  color: var(--color-green);
+}
+
+.card__user-description {
+  /* Box model */
+  margin-block: 2em;
+
+  /* Typography */
+  font-size: 0.825rem;
+  font-weight: 200;
+}
+
+.card__social-links ul {
+  /* Misc */
+  list-style-type: none;
+}
+
+.card__social-links li + li {
+  /* Box model */
+  margin-block-start: 1rem;
+}
+
+.card__social-link {
+  /* Box model */
+  display: block;
+  padding: 1em;
+
+  /* Typography */
+  font-weight: 600;
+
+  /* Visual */
+  background-color: var(--color-grey-700);
+  border-radius: 0.5em;
+  color: inherit;
+  text-decoration: none;
+
+  /* Misc */
+  transition: all 0.3s ease-in-out;
+}
+
+.card__social-link:hover {
+  /* Visual */
+  color: var(--color-grey-900);
+  background-color: var(--color-green);
+}
